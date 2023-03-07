@@ -65,18 +65,6 @@ public class MainActivity extends AppCompatActivity {
 
     }
 
-    public int suma(int a, int b){
-        return a+b;
-    }
-    public int resta(int a, int b){
-        return a-b;
-    }
-    public int multiplicacion(int a, int b){
-        return a*b;
-    }
-    public int division(int a, int b){
-        return a/b;
-    }
 
     public void EscribirSiete(View view){
         numero1= Float.parseFloat(answ.getText().toString());
@@ -95,6 +83,68 @@ public class MainActivity extends AppCompatActivity {
             answ.setText(answ.getText()+"8");
         }
     }
+    public void EscribirNueve(View view){
+        numero1= Float.parseFloat(answ.getText().toString());
+        if(numero1== 0.0f){
+            answ.setText("9");
+        }else{
+            answ.setText(answ.getText()+"9");
+        }
+    }
+    public void EscribirCuatro(View view){
+        numero1= Float.parseFloat(answ.getText().toString());
+        if(numero1== 0.0f){
+            answ.setText("4");
+        }else{
+            answ.setText(answ.getText()+"4");
+        }
+    }
+    public void EscribirCinco(View view){
+        numero1= Float.parseFloat(answ.getText().toString());
+        if(numero1== 0.0f){
+            answ.setText("5");
+        }else{
+            answ.setText(answ.getText()+"5");
+        }
+    }
+    public void EscribirSeis(View view){
+        numero1= Float.parseFloat(answ.getText().toString());
+        if(numero1== 0.0f){
+            answ.setText("6");
+        }else{
+            answ.setText(answ.getText()+"6");
+        }
+    }
+    public void EscribirTres(View view){
+        numero1= Float.parseFloat(answ.getText().toString());
+        if(numero1== 0.0f){
+            answ.setText("3");
+        }else{
+            answ.setText(answ.getText()+"3");
+        }
+    }
+    public void EscribirDos(View view){
+        numero1= Float.parseFloat(answ.getText().toString());
+        if(numero1== 0.0f){
+            answ.setText("2");
+        }else{
+            answ.setText(answ.getText()+"2");
+        }
+    }public void EscribirUno(View view){
+        numero1= Float.parseFloat(answ.getText().toString());
+        if(numero1== 0.0f){
+            answ.setText("1");
+        }else{
+            answ.setText(answ.getText()+"1");
+        }
+    }public void EscribirCero(View view){
+        numero1= Float.parseFloat(answ.getText().toString());
+        if(numero1== 0.0f){
+            answ.setText("0");
+        }else{
+            answ.setText(answ.getText()+"0");
+        }
+    }
 
     public void Clearall(View view){
         answ.setText(0);
@@ -106,6 +156,22 @@ public class MainActivity extends AppCompatActivity {
     public void Dividir(View view){
         numero1= Float.parseFloat(answ.getText().toString());
         operacion="/";
+        answ.setText("0");
+    }
+
+    public void Sumar(View view){
+        numero1= Float.parseFloat(answ.getText().toString());
+        operacion="+";
+        answ.setText("0");
+    }
+    public void Restar(View view){
+        numero1= Float.parseFloat(answ.getText().toString());
+        operacion="-";
+        answ.setText("0");
+    }
+    public void Multiplicar(View view){
+        numero1= Float.parseFloat(answ.getText().toString());
+        operacion="*";
         answ.setText("0");
     }
 
@@ -130,5 +196,9 @@ public class MainActivity extends AppCompatActivity {
             answ.setText(result + "");
 
         }
+        numero1=0.0f;
+        numero2=0.0f;
+        operacion="";
     }
+
 }
