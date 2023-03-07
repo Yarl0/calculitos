@@ -4,8 +4,10 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.annotation.SuppressLint;
 import android.os.Bundle;
+import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
+import android.widget.Toast;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -26,6 +28,12 @@ public class MainActivity extends AppCompatActivity {
     private Button mult;
     private Button num_0;
     private Button div;
+    private Button equal;
+
+    float numero1 = 0.0f;
+    float numero2 = 0.0f;
+
+    String operacion = "";
 
     @SuppressLint("WrongViewCast")
     protected void onCreate(Bundle savedInstanceState) {
@@ -52,6 +60,7 @@ public class MainActivity extends AppCompatActivity {
 
         num_0=findViewById(R.id.num_0);
         div=findViewById(R.id.div);
+        equal=findViewById(R.id.equal);
 
 
     }
@@ -67,5 +76,59 @@ public class MainActivity extends AppCompatActivity {
     }
     public int division(int a, int b){
         return a/b;
+    }
+
+    public void EscribirSiete(View view){
+        numero1= Float.parseFloat(answ.getText().toString());
+        if(numero1== 0.0f){
+            answ.setText("7");
+        }else{
+            answ.setText(answ.getText()+"7");
+        }
+    }
+
+    public void EscribirOcho(View view){
+        numero1= Float.parseFloat(answ.getText().toString());
+        if(numero1== 0.0f){
+            answ.setText("8");
+        }else{
+            answ.setText(answ.getText()+"8");
+        }
+    }
+
+    public void Clearall(View view){
+        answ.setText(0);
+        numero1=0.0f;
+        numero2=0.0f;
+        operacion="";
+    }
+
+    public void Dividir(View view){
+        numero1= Float.parseFloat(answ.getText().toString());
+        operacion="/";
+        answ.setText("0");
+    }
+
+    public void Mostrar(View view) {
+        numero2=Float.parseFloat(answ.getText().toString());
+        if(operacion.equals("/")){
+            if(numero2==0.0f){
+                answ.setText("0");
+                Toast.makeText(this, "No se vale la operacion, no sea menso",Toast.LENGTH_LONG).show();
+            }else{
+                float result= numero1/numero2;
+                answ.setText(result + "");
+            } 
+        } else if (operacion.equals("*")) {
+            float result= numero1*numero2;
+            answ.setText(result + "");
+        }else if (operacion.equals("+")) {
+            float result= numero1+numero2;
+            answ.setText(result + "");
+        }else if (operacion.equals("-")) {
+            float result= numero1*numero2;
+            answ.setText(result + "");
+
+        }
     }
 }

@@ -24,7 +24,8 @@
             android:layout_width="wrap_content"
             android:layout_height="71dp"
             android:layout_weight="1"
-            android:text="AC" />
+            android:text="AC"
+            android:onClick="Clearall"/>
 
         <Button
             android:id="@+id/del"
@@ -46,13 +47,15 @@
                 android:id="@+id/num_7"
                 android:layout_width="47dp"
                 android:layout_height="80dp"
-                android:text="7" />
+                android:text="7"
+                android:onClick="EscribirSiete"/>
 
             <Button
                 android:id="@+id/num_8"
                 android:layout_width="105dp"
                 android:layout_height="80dp"
-                android:text="8" />
+                android:text="8"
+                android:onClick="EscribirOcho"/>
 
             <Button
                 android:id="@+id/num_9"
@@ -130,11 +133,14 @@
 
         <TableRow
             android:layout_width="match_parent"
-            android:layout_height="76dp">
+            android:layout_height="81dp">
 
-            <Space
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content" />
+            <Button
+                android:id="@+id/equal"
+                android:layout_width="108dp"
+                android:layout_height="77dp"
+                android:text="="
+                android:onClick="Mostrar"/>
 
             <Button
                 android:id="@+id/num_0"
@@ -150,7 +156,8 @@
                 android:id="@+id/div"
                 android:layout_width="wrap_content"
                 android:layout_height="89dp"
-                android:text="/" />
+                android:text="/"
+                android:onClick="Dividir"/>
 
         </TableRow>
 
